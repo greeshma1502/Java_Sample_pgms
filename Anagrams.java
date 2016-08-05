@@ -28,17 +28,3 @@ public class Anagrams {
 	}
 }
 
-// int[] a1 = new int[ch1.length];
-// int[] a2 = new int[ch2.length];
-//
-// if (str1.length() == str2.length()) {
-// for (int i = 0; i < a1.length; i++){
-// for (char ch : ch1) {
-// char temp = str1.charAt(ch);
-// a1[i] = (int) temp;
-// }
-// }
-//
-// System.out.println("ascii array " +a1);
-// }
-
