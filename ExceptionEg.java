@@ -24,19 +24,4 @@ public class ExceptionEg {
 	}
 }
 
-// public static void convertNumbers(String s1, String s2) {
-// try {
-//
-// int i = Integer.parseInt(s1);
-// int j = Integer.parseInt(s2);
-// System.out.println("Converted values" + i + j);
-// divideNumbers(i, j);
-//
-// } catch (NumberFormatException e) {
-// System.out.println("Args must be integers");
-// } catch (ArithmeticException e1){
-// System.out.println("Cannot divide by 0");
-// }
-//
-// }
 
