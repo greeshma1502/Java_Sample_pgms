@@ -3,9 +3,7 @@ import java.util.Scanner;
 public class ExceptionEg {
 
 	public static void main(String[] args) {
-		// String s1 = "abdc";
-		// String s2 = "chdgs";
-		// convertNumbers(s1, s2);
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the numbers");
 		int i = sc.nextInt();
