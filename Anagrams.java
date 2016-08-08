@@ -4,7 +4,8 @@ public class Anagrams {
 		Anagrams an = new Anagrams();
 		String str1 = "silent";
 		String str2 = "listenp";
-
+		
+		
 		boolean bool = an.anagrams(str1, str2);
 		System.out.println("Anagrams? " + bool);
 	}
