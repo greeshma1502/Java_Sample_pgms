@@ -1,0 +1,282 @@
+Given a string, return a new string where "not " has been added to the front. 
+However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+
+public String notString(String str) {
+  if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+    return str;
+  }
+  else
+  return "not " + str;
+  
+}
+.........................................................................................................................
+
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. 
+The value of n will be a valid index of a char in the original string
+
+public String missingChar(String str, int n) {
+  
+  if(n >= 0 && n<str.length()){
+    String temp = str.substring(0,n) + str.substring(n+1);
+    return temp;
+  }
+  else
+  return "not in range"; 
+}
+
+............................................................................................................................
+
+Given a string, return a new string where the first and last chars have been exchanged.
+
+public String frontBack(String str) {
+  if (str.length() <= 1) return str;
+  
+  String mid = str.substring(1, str.length()-1);
+  
+  // last + mid + first
+  return str.charAt(str.length()-1) + mid + str.charAt(0);
+}
+
+..........................................................................................................................
+Return true if the given string contains between 1 and 3 'e' chars.
+
+public boolean stringE(String str) {
+  int count = 0;
+ char[] chr = str.toCharArray();
+ for(int i=0; i<chr.length;i++){
+   if(chr[i] == 'e'){
+     count++;
+   }
+ }
+ if(count >=1 && count <= 3){
+   return true;
+ }
+ else
+ return false;
+}
+..........................................................................................................................
+Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string
+
+public String everyNth(String str, int n) {
+  
+  String result = "";
+  
+  for(int i=0; i<str.length();i=i+n){
+   result = result + str.charAt(i);
+  }
+  
+  return result;
+}
+..............................................................................................................................
+Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
+
+int countXX(String str) {
+  
+  int count = 0;
+  char[] chr = str.toCharArray();
+  
+  for(int i=0; i<chr.length;i++){
+    
+    if(chr[i] == 'x'){
+      count++;
+    }
+    else{
+      
+      return count;
+    }
+  }
+ 
+  count--;
+  return count;
+}
+.................................................................................................................................
+Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
+doubleX("axxbb") ? true
+doubleX("axaxax") ? false
+doubleX("xxxxx") ? true
+
+boolean doubleX(String str) {
+  
+  int index = str.indexOf('x');
+  if(index == -1)
+  return false;
+  
+  if(index+1 >= str.length())
+  return false;
+
+  if(str.charAt(index+1) == 'x'){
+     return true;
+  }
+  return false;
+}
+...................................................................................................................................
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+public String stringSplosion(String str) {
+   
+  String temp = "";
+  
+   for(int i=0; i<str.length();i++){
+     
+      temp = temp + str.substring(0,i+1);
+   }
+  return temp;
+}
+....................................................................................................................................
+Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+
+public boolean arrayFront9(int[] nums) {
+  
+  int end = nums.length;
+  if(end > 4)
+  end = 4;
+  for(int i=0; i < end; i++){
+    if(nums[i] == 9)
+    return true;
+  }
+  return false;
+}
+....................................................................................................................................
+Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. 
+So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+public int stringMatch(String a, String b) {
+  int count = 0;
+  
+  int length = Math.min(a.length(), b.length());
+  
+  for (int i=0; i<length-1; i++) {
+    String aSub = a.substring(i, i+2);
+    String bSub = b.substring(i, i+2);
+    if (aSub.equals(bSub)) {  // Use .equals() with strings
+      count++;
+    }
+  }
+
+  return count;
+}
+......................................................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
