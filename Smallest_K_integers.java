@@ -11,13 +11,16 @@ public class Smallest_K_integers {
 		Scanner sc1 = new Scanner(System.in);
 		int k = sc1.nextInt();
 		System.out.println("Enter the integers");
-		
+
 		while (sc.hasNextInt()) {
 			int i = sc.nextInt();
 			arrayList.add(i);
 		}
 		System.out.println(arrayList);
 		System.out.println("Enter the value of k");
+		
+		// Collections.sort takes nlogn at worst case
+		
 		Collections.sort(arrayList);
 		sk.smallest_k_Integers(arrayList, k);
 	}

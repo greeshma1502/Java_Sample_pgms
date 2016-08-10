@@ -9,7 +9,6 @@ public class Palindrome {
 		String str = sc.next();
 		System.out.println(str);
 		char[] chr = str.toCharArray();
-
 		String str1 = pl.palindrome(chr);
 
 		if (str1.equals(str))
